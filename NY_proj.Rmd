@@ -1,0 +1,85 @@
+---
+title: "Airbnb NY"
+output: html_document
+date: "2025-11-05"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, echo=FALSE}
+install.packages("pacman")
+
+library(pacman)
+
+pacman::p_load(tidyverse, lme4)
+```
+```{r}
+data <- read_csv("/work/CulturalDataScience/AB_NYC_2019.csv",show_col_types = FALSE)
+```
+```{r}
+spec(data)
+data$availability_365 <- as.integer(data$availability_365)
+data$room_type <- as.factor(data$room_type)
+```
+
+
+```{r}
+model1 <- lm(price ~ availability_365, data=data)
+```
+
+```{r}
+summary(model1)
+
+# A higher increase in availability during the year drives an increase in the price per night for the room / apartment
+```
+
+```{r}
+model2 <- lm(price ~ room_type, data=data)
+```
+
+```{r}
+summary(model2)
+```
+```{r}
+model3 <- lmer(price ~ availability_365 + (1|room_type), data=data)
+```
+
+```{r}
+summary(model3)
+# Availability drives prices upward with 0.15 per extra day the listing is available for rent during the year.   
+```
+
+```{r}
+model4 <- lmer(price ~ availability_365 + (1|room_type) + (1|neighbourhood), data=data)
+```
+
+```{r}
+summary(model4)
+
+# This tells us that the average listing price, taking both room type and neighborhood placement into account, lands at 87.62 dollars per night when availability is equal to 0 (which is a bit abstract in practice).
+
+# We also see that the availability metric still increases listing prices with around the same effect of 0.16 dollars per availability day increase.
+```
+
+
+```{r}
+anova(model3,model4)
+# Adding a random intercept for neighbourhood makes for a significantly better model, which makes a lot of sense since neighboorhood also encodes demand
+```
+
+```{r}
+lat_model <- lm(reviews_per_month ~ latitude, data=data)
+
+long_model <- lm(reviews_per_month ~ longitude, data=data)
+```
+
+```{r}
+summary(name_model)
+```
+
+```{r}
+summary(long_model)
+```
+
