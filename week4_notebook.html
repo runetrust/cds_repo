@@ -7575,12 +7575,12 @@ The important thing is to learn, not to solve all the challenges!</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Before we start we need to import the necessary packages</span>
@@ -7592,67 +7592,6 @@ The important thing is to learn, not to solve all the challenges!</p>
 <span class="kn">import</span><span class="w"> </span><span class="nn">requests</span> <span class="c1"># We might need this package to get some data from the web</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn</span><span class="w"> </span><span class="kn">import</span> <span class="n">datasets</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Defaulting to user installation because normal site-packages is not writeable
-Collecting pandas
-  Downloading pandas-2.3.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (91 kB)
-Collecting numpy&gt;=1.26.0 (from pandas)
-  Downloading numpy-2.3.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
-Requirement already satisfied: python-dateutil&gt;=2.8.2 in /home/ucloud/.local/lib/python3.12/site-packages (from pandas) (2.9.0.post0)
-Collecting pytz&gt;=2020.1 (from pandas)
-  Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
-Collecting tzdata&gt;=2022.7 (from pandas)
-  Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
-Requirement already satisfied: six&gt;=1.5 in /usr/lib/python3/dist-packages (from python-dateutil&gt;=2.8.2-&gt;pandas) (1.16.0)
-Downloading pandas-2.3.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.0 MB)
-   <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">12.0/12.0 MB</span> <span class="ansi-red-fg">27.3 MB/s</span>  <span class="ansi-yellow-fg">0:00:00</span>m0:00:010:01
-Downloading numpy-2.3.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.6 MB)
-   <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">16.6/16.6 MB</span> <span class="ansi-red-fg">34.2 MB/s</span>  <span class="ansi-yellow-fg">0:00:00</span>m0:00:01
-Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
-Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
-Installing collected packages: pytz, tzdata, numpy, pandas
-   <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">4/4</span> [pandas]2m3/4 [pandas]
-Successfully installed numpy-2.3.3 pandas-2.3.2 pytz-2025.2 tzdata-2025.2
-Note: you may need to restart the kernel to use updated packages.
-Defaulting to user installation because normal site-packages is not writeable
-Collecting lxml
-  Downloading lxml-6.0.2-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.6 kB)
-Downloading lxml-6.0.2-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.3 MB)
-   <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">5.3/5.3 MB</span> <span class="ansi-red-fg">16.6 MB/s</span>  <span class="ansi-yellow-fg">0:00:00</span>m0:00:01
-Installing collected packages: lxml
-Successfully installed lxml-6.0.2
-Note: you may need to restart the kernel to use updated packages.
-Defaulting to user installation because normal site-packages is not writeable
-Collecting scikit-learn
-  Downloading scikit_learn-1.7.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
-Requirement already satisfied: numpy&gt;=1.22.0 in /home/ucloud/.local/lib/python3.12/site-packages (from scikit-learn) (2.3.3)
-Collecting scipy&gt;=1.8.0 (from scikit-learn)
-  Downloading scipy-1.16.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
-Collecting joblib&gt;=1.2.0 (from scikit-learn)
-  Downloading joblib-1.5.2-py3-none-any.whl.metadata (5.6 kB)
-Collecting threadpoolctl&gt;=3.1.0 (from scikit-learn)
-  Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
-Downloading scikit_learn-1.7.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.5 MB)
-   <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">9.5/9.5 MB</span> <span class="ansi-red-fg">20.2 MB/s</span>  <span class="ansi-yellow-fg">0:00:00</span>m0:00:01
-Downloading joblib-1.5.2-py3-none-any.whl (308 kB)
-Downloading scipy-1.16.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.7 MB)
-   <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">35.7/35.7 MB</span> <span class="ansi-red-fg">72.4 MB/s</span>  <span class="ansi-yellow-fg">0:00:00</span>6m0:00:01
-Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
-Installing collected packages: threadpoolctl, scipy, joblib, scikit-learn
-   <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">4/4</span> [scikit-learn][0m [scikit-learn]
-Successfully installed joblib-1.5.2 scikit-learn-1.7.2 scipy-1.16.2 threadpoolctl-3.6.0
-Note: you may need to restart the kernel to use updated packages.
-</pre>
 </div>
 </div>
 </div>
@@ -9391,12 +9330,26 @@ So, while you solve the yellow excercises ensure that you add some meaningful co
 </div>
 </div>
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">dt</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [68]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Starter code.</span>
@@ -9427,13 +9380,13 @@ So, while you solve the yellow excercises ensure that you add some meaningful co
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>/tmp/ipykernel_354/4030390085.py:9: FutureWarning: Passing literal html to 'read_html' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+<pre>/tmp/ipykernel_1514/4030390085.py:9: FutureWarning: Passing literal html to 'read_html' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
   spacedata = pd.read_html(response.text)
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[68]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -9501,11 +9454,11 @@ So, while you solve the yellow excercises ensure that you add some meaningful co
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">## The year with the most launches </span>
-<span class="n">combined_space</span> <span class="o">=</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">combined_space</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Mission"</span><span class="p">,</span> <span class="s2">"Date"</span><span class="p">,</span> <span class="s2">"Details"</span><span class="p">]</span>
+<span class="n">combined_space</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -9515,30 +9468,111 @@ So, while you solve the yellow excercises ensure that you add some meaningful co
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/ipykernel_354/4046414026.py</span> in <span class="ansi-cyan-fg">?</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-fg">      1</span> <span style="color: rgb(95,135,135)">## The year with the most launches</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">2</span> combined_space = combined_space.DataFrame()
-<span class="ansi-green-fg">      3</span> 
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ansi-green-fg">~/.local/lib/python3.12/site-packages/pandas/core/generic.py</span> in <span class="ansi-cyan-fg">?</span><span class="ansi-blue-fg">(self, name)</span>
-<span class="ansi-green-fg">   6314</span>             <span class="ansi-bold" style="color: rgb(0,135,0)">and</span> name <span class="ansi-bold" style="color: rgb(0,135,0)">not</span> <span class="ansi-bold" style="color: rgb(0,135,0)">in</span> self._accessors
-<span class="ansi-green-fg">   6315</span>             <span class="ansi-bold" style="color: rgb(0,135,0)">and</span> self._info_axis._can_hold_identifiers_and_holds_name(name)
-<span class="ansi-green-fg">   6316</span>         ):
-<span class="ansi-green-fg">   6317</span>             <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> self[name]
-<span class="ansi-green-fg">-&gt; </span><span class="ansi-green-fg">6318</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> object.__getattribute__(self, name)
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-<span class="ansi-red-fg">AttributeError</span>: 'DataFrame' object has no attribute 'DataFrame'</pre>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Mission</th>
+<th>Date</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>Sputnik 1</td>
+<td>4 October 1957</td>
+<td>First Earth orbiter</td>
+</tr>
+<tr>
+<th>1</th>
+<td>Sputnik 2</td>
+<td>3 November 1957</td>
+<td>Earth orbiter, first animal in orbit, a dog na...</td>
+</tr>
+<tr>
+<th>2</th>
+<td>Explorer 1</td>
+<td>1 February 1958</td>
+<td>Earth orbiter; discovered Van Allen radiation ...</td>
+</tr>
+<tr>
+<th>3</th>
+<td>Vanguard 1</td>
+<td>17 March 1958</td>
+<td>Earth orbiter; oldest spacecraft still in Eart...</td>
+</tr>
+<tr>
+<th>4</th>
+<td>Luna 1</td>
+<td>2 January 1959</td>
+<td>First lunar flyby (attempted lunar impact?); f...</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">## The year with the most launches </span>
+<span class="c1"># Making the date column into datetime objects</span>
+<span class="n">combined_space</span><span class="p">[</span><span class="s2">"Date"</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span>
+    <span class="n">combined_space</span><span class="p">[</span><span class="s2">"Date"</span><span class="p">]</span>
+<span class="p">)</span>
+
+<span class="c1"># Extracting year only from the date column</span>
+<span class="n">combined_space</span><span class="p">[</span><span class="s2">"Year"</span><span class="p">]</span> <span class="o">=</span> <span class="n">combined_space</span><span class="p">[</span><span class="s2">"Date"</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span>
+
+<span class="c1"># Counting launches per year and identifying which year variable has the most launches</span>
+<span class="n">launches_per_year</span> <span class="o">=</span> <span class="n">combined_space</span><span class="p">[</span><span class="s2">"Year"</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<span class="n">most_launches_year</span> <span class="o">=</span> <span class="n">launches_per_year</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
+<span class="n">most_launches_year</span>
+
+<span class="c1"># Output shows most launches in 1967</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>np.float64(1967.0)</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9547,12 +9581,32 @@ So, while you solve the yellow excercises ensure that you add some meaningful co
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># The month with the most launches </span>
+<span class="n">combined_space</span><span class="p">[</span><span class="s2">"Month"</span><span class="p">]</span> <span class="o">=</span> <span class="n">combined_space</span><span class="p">[</span><span class="s2">"Date"</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span>
+
+<span class="c1"># Counting the same as above using datetime objects, only just looking at months this time</span>
+<span class="n">launches_per_month</span> <span class="o">=</span> <span class="n">combined_space</span><span class="p">[</span><span class="s2">"Month"</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<span class="n">most_launches_month</span> <span class="o">=</span> <span class="n">launches_per_month</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
+<span class="n">most_launches_month</span>
+
+<span class="c1"># Output shows most launches in month 11, also known as November</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>np.float64(11.0)</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9561,7 +9615,34 @@ So, while you solve the yellow excercises ensure that you add some meaningful co
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Ranking of months with the most to the fewest launches</span>
+<span class="n">month_ranking</span> <span class="o">=</span> <span class="n">launches_per_month</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">month_ranking</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>Month
+11.0    31
+8.0     27
+9.0     25
+10.0    24
+1.0     21
+7.0     21
+12.0    19
+2.0     18
+5.0     18
+3.0     15
+6.0     14
+4.0     13
+Name: count, dtype: int64</pre>
 </div>
 </div>
 </div>
@@ -9586,29 +9667,205 @@ So, while you solve the yellow excercises ensure that you add some meaningful co
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">io</span><span class="w"> </span><span class="kn">import</span> <span class="n">StringIO</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#supervillandata = pd.read_html("https://en.wikipedia.org/wiki/List_of_comic_book_supervillain_debuts")</span>
-
-<span class="n">url_villan</span> <span class="o">=</span> <span class="s2">"https://en.wikipedia.org/wiki/List_of_comic_book_supervillain_debuts"</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">url_villain</span> <span class="o">=</span> <span class="s2">"https://en.wikipedia.org/wiki/List_of_comic_book_supervillain_debuts"</span>
 
 <span class="c1"># Add a User-Agent header so Wikipedia doesn't block it</span>
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"User-Agent"</span><span class="p">:</span> <span class="s2">"Mozilla/5.0 (Windows NT 10.0; Win64; x64)"</span><span class="p">}</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url_villan</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url_villain</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
 
 <span class="c1"># Pass the HTML text to pandas</span>
-<span class="n">supervillandata</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="n">supervillaindata</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="n">StringIO</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
 
-<span class="c1"># combine all tables into data frame</span>
-<span class="n">df_supervillan</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">supervillandata</span><span class="p">,</span> <span class="n">ignore_index</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="n">df_supervillan</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="c1"># Error handling for non-sensical fetch from the responses package</span>
+<span class="n">villain_tables</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">table</span> <span class="ow">in</span> <span class="n">supervillaindata</span><span class="p">:</span>
+    <span class="k">if</span> <span class="p">{</span><span class="s2">"Character / Team"</span><span class="p">,</span> <span class="s2">"Year Debuted"</span><span class="p">,</span> <span class="s2">"Company"</span><span class="p">}</span><span class="o">.</span><span class="n">issubset</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="p">):</span>
+        <span class="n">villain_tables</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
+
+<span class="n">df_supervillain</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">villain_tables</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_supervillain</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Character / Team</th>
+<th>Year Debuted</th>
+<th>Company</th>
+<th>Creator/s</th>
+<th>First Appearance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>Ultra-Humanite</td>
+<td>1939 (June)</td>
+<td>DC</td>
+<td>Jerry Siegel, Joe Shuster</td>
+<td>Action Comics (vol. 1) #13</td>
+</tr>
+<tr>
+<th>1</th>
+<td>Dr. Death</td>
+<td>1939 (July)</td>
+<td>DC</td>
+<td>Bob Kane, Bill Finger</td>
+<td>Detective Comics (vol. 1) #29</td>
+</tr>
+<tr>
+<th>2</th>
+<td>The Monk</td>
+<td>1939 (September)</td>
+<td>DC</td>
+<td>Bob Kane, Bill Finger</td>
+<td>Detective Comics (vol. 1) #31</td>
+</tr>
+<tr>
+<th>3</th>
+<td>The Claw</td>
+<td>1939 (December)</td>
+<td>Lev Gleason Publications</td>
+<td>Jack Cole</td>
+<td>Silver Streak Comics #1</td>
+</tr>
+<tr>
+<th>4</th>
+<td>Hath-Set</td>
+<td>1940 (January)</td>
+<td>DC</td>
+<td>Gardner Fox, Dennis Neville</td>
+<td>Flash Comics #1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [45]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Cleaning columns</span>
+<span class="n">df_supervillain</span> <span class="o">=</span> <span class="n">df_supervillain</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">"Character / Team"</span><span class="p">:</span> <span class="s2">"Villain"</span><span class="p">,</span>
+    <span class="s2">"Year Debuted"</span><span class="p">:</span> <span class="s2">"Year"</span><span class="p">,</span>
+    <span class="s2">"Company"</span><span class="p">:</span> <span class="s2">"Publisher"</span>
+<span class="p">})</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Making a year only column using a regex to exclude month</span>
+<span class="n">df_supervillain</span><span class="p">[</span><span class="s2">"Year"</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">df_supervillan</span><span class="p">[</span><span class="s2">"Year"</span><span class="p">]</span>
+    <span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="sa">r</span><span class="s2">"(\d</span><span class="si">{4}</span><span class="s2">)"</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="c1"># Subsetting to only keep data within scope</span>
+<span class="n">df_supervillain</span> <span class="o">=</span> <span class="n">df_supervillain</span><span class="p">[</span>
+    <span class="p">(</span><span class="n">df_supervillain</span><span class="p">[</span><span class="s2">"Year"</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">1930</span><span class="p">)</span> <span class="o">&amp;</span>
+    <span class="p">(</span><span class="n">df_supervillain</span><span class="p">[</span><span class="s2">"Year"</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2019</span><span class="p">)</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [57]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Decade column</span>
+<span class="n">df_supervillain</span><span class="p">[</span><span class="s2">"Decade"</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_supervillain</span><span class="p">[</span><span class="s2">"Year"</span><span class="p">]</span> <span class="o">//</span> <span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>/tmp/ipykernel_1514/2563604700.py:2: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_supervillain["Decade"] = (df_supervillain["Year"] // 10) * 10
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9617,35 +9874,334 @@ So, while you solve the yellow excercises ensure that you add some meaningful co
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 1. Write a script that combines the tables showing supervillain debuts from the 30's through the 2010's</span>
+<span class="n">villains_by_decade</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">df_supervillain</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"Decade"</span><span class="p">)[</span><span class="s2">"Villain"</span><span class="p">]</span>
+    <span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="n">villains_by_decade</span>
+
+<span class="c1"># This outputs what unique villains were introduced in which decade</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Decade</th>
+<th>Villain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>1930.0</td>
+<td>[Ultra-Humanite, Dr. Death, The Monk, The Claw]</td>
+</tr>
+<tr>
+<th>1</th>
+<td>1940.0</td>
+<td>[Hath-Set, Hugo Strange, Doctor Sivana, Lex Lu...</td>
+</tr>
+<tr>
+<th>2</th>
+<td>1950.0</td>
+<td>[Deadshot, The Mekon, Red Hood, Killer Moth, F...</td>
+</tr>
+<tr>
+<th>3</th>
+<td>1960.0</td>
+<td>[Grottu, Starro, Amazo, Professor Ivo, Trickst...</td>
+</tr>
+<tr>
+<th>4</th>
+<td>1970.0</td>
+<td>[Agatha Harkness, Arkon, Man-Bat, Lethal Legio...</td>
+</tr>
+<tr>
+<th>5</th>
+<td>1980.0</td>
+<td>[Cutthroat, Destiny, Sebastian Shaw, Rainbow R...</td>
+</tr>
+<tr>
+<th>6</th>
+<td>1990.0</td>
+<td>[Crimesmith, NKVDemon, Blackout (Lilin), Cybor...</td>
+</tr>
+<tr>
+<th>7</th>
+<td>2000.0</td>
+<td>[Kyle Abbot, Able Crown, Agamemno, Orca, Zeiss...</td>
+</tr>
+<tr>
+<th>8</th>
+<td>2010.0</td>
+<td>[Allegra Garcia, Massacre, The Maker, Court of...</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [62]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 2. Write a script that ranks each decade in terms of how many supervillains debuted in that decade</span>
+<span class="n">villains_per_decade_df</span> <span class="o">=</span> <span class="n">villains_per_decade</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">villains_per_decade_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Decade"</span><span class="p">,</span> <span class="s2">"Number_of_Villains"</span><span class="p">]</span>
+<span class="n">villains_per_decade_df</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[62]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Decade</th>
+<th>Number_of_Villains</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>1960.0</td>
+<td>229</td>
+</tr>
+<tr>
+<th>1</th>
+<td>1970.0</td>
+<td>97</td>
+</tr>
+<tr>
+<th>2</th>
+<td>1980.0</td>
+<td>91</td>
+</tr>
+<tr>
+<th>3</th>
+<td>1990.0</td>
+<td>85</td>
+</tr>
+<tr>
+<th>4</th>
+<td>2000.0</td>
+<td>51</td>
+</tr>
+<tr>
+<th>5</th>
+<td>1940.0</td>
+<td>47</td>
+</tr>
+<tr>
+<th>6</th>
+<td>1950.0</td>
+<td>26</td>
+</tr>
+<tr>
+<th>7</th>
+<td>2010.0</td>
+<td>14</td>
+</tr>
+<tr>
+<th>8</th>
+<td>1930.0</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [66]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 3. Write a script that ranks the different comics companies in terms of how many supervillains they have, and display the results </span>
+
+<span class="c1"># Normalizing publisher names for a more representative presentation</span>
+<span class="n">df_supervillain</span><span class="p">[</span><span class="s2">"Publisher"</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">df_supervillain</span><span class="p">[</span><span class="s2">"Publisher"</span><span class="p">]</span>
+    <span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"Comics"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="c1"># Counting per normalized publisher</span>
+<span class="n">villains_per_publisher</span> <span class="o">=</span> <span class="n">df_supervillan</span><span class="p">[</span><span class="s2">"Publisher"</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<span class="n">villains_per_publisher_df</span> <span class="o">=</span> <span class="n">villains_per_publisher</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">villains_per_publisher_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Publisher"</span><span class="p">,</span> <span class="s2">"Number_of_Villains"</span><span class="p">]</span>
+<span class="n">villains_per_publisher_df</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>/tmp/ipykernel_1514/531568689.py:4: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_supervillain["Publisher"] = (
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[66]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Publisher</th>
+<th>Number_of_Villains</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>DC</td>
+<td>345</td>
+</tr>
+<tr>
+<th>1</th>
+<td>Marvel</td>
+<td>270</td>
+</tr>
+<tr>
+<th>2</th>
+<td>Dark Horse</td>
+<td>6</td>
+</tr>
+<tr>
+<th>3</th>
+<td>Fawcett Comics/DC</td>
+<td>6</td>
+</tr>
+<tr>
+<th>4</th>
+<td>Image</td>
+<td>5</td>
+</tr>
+<tr>
+<th>5</th>
+<td>Marvel/Timely</td>
+<td>4</td>
+</tr>
+<tr>
+<th>6</th>
+<td>Disney/Hyperion</td>
+<td>4</td>
+</tr>
+<tr>
+<th>7</th>
+<td>Eternity</td>
+<td>3</td>
+</tr>
+<tr>
+<th>8</th>
+<td>Lev Gleason Publications</td>
+<td>1</td>
+</tr>
+<tr>
+<th>9</th>
+<td>Comico</td>
+<td>1</td>
+</tr>
+<tr>
+<th>10</th>
+<td>Mirage</td>
+<td>1</td>
+</tr>
+<tr>
+<th>11</th>
+<td>Image Comics</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </div>
