@@ -1,0 +1,177 @@
+---
+title: "Portfolio 2"
+author: "Rune Trust"
+date: "2025-11-05"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE, echo = TRUE) 
+```
+
+
+```{r, echo=FALSE, include=FALSE}
+#load packages
+
+install.packages("pacman")
+
+pacman::p_load("tidyverse", "dslabs", "car")
+```
+
+
+Part 1
+Use the ‘divorce_margarine’ dataset from the ‘dslabs’ package to explore the relationship
+between margarine consumption and divorce rates in Maine. Visualise the data, make a
+correlation test. Report the correlation coefficient and p-value in APA format, and briefly
+discuss the results in a practical way.
+```{r}
+data("divorce_margarine")
+df = divorce_margarine
+```
+
+
+## Starting with a scatterplot to get an understanding of the relationship between margarine consumption and divorce rates.
+
+```{r}
+ggplot(df, aes(x = margarine_consumption_per_capita, y = divorce_rate_maine))+
+  geom_point()+
+  labs(title = "Margarine Consumption per Capita and Divorce Rates",
+       x = "Margarine Consumption per Capita",
+       y = "Divorce Rate")+
+  theme_minimal()
+```
+
+## In order to make correlation test, it is necessary to see if data is normally distributed
+
+```{r}
+# Shapiro-Wilk normality test for margarine consumption 
+shapiro.test(df$margarine_consumption_per_capita)
+# Shapiro-Wilk normality test for Divorce rate
+shapiro.test(df$divorce_rate_maine)
+```
+
+As p-values are greater than 0.05, it must be assumed that both distributions of the variables are not significantly different from a normal distribution.
+
+```{r}
+correlation <- cor.test(df$margarine_consumption_per_capita, df$divorce_rate_maine, 
+                    method = "pearson")
+correlation
+```
+
+Pearson's correlation test was used to look into the relationship between margarine consumption per capita and the rate of divorce in Maine. A positive correlation is present between the two variables, r(8) = .99, p < .001, 95% CI [.97, .998]. 
+
+## Reporting in plain language
+
+This correlation test revealed a robust, statistically significant correlation linking margarine consumption per capita to the divorce rates in Maine.The data indicates that higher margarine consumption corresponds with elevated divorce rates. That said, establishing correlation differs fundamentally from proving causation—despite the statistical significance observed here, this relationship probably stems from an unmeasured confounding variable not present in the  dataset.
+
+# Part 2
+
+```{r, echo=FALSE}
+#load data
+
+data("GSSvocab")
+
+vocab_df <- GSSvocab
+```
+
+## Part 2.0
+Work with the ‘GSSvocab’ dataset from the ‘car’ package, focusing only on the year 1978
+(subset that year and exclude missing values).
+```{r}
+#Filter for the year 1978
+vocab_df <- vocab_df %>% 
+  filter(year == 1978)
+
+#omit all rows containing NA's
+vocab_df <- na.omit(vocab_df)
+  
+```
+
+## Part 2.1
+Investigate how vocabulary test scores (vocab)
+are related to education (educ). Present the relationship in a plot, fit a regression model, and
+report results in APA format (coefficients, p-values, and R2), followed by a short practical
+interpretation.
+```{r, warning = FALSE}
+#Making the plot with regression line
+ggplot(vocab_df, aes(x = educ, y = vocab)) + 
+  geom_point(color='blue') +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE, color = "red")+
+  labs(
+    title = "Relationship Between Vocab Scores and Education Level",
+    x = "Education Level",
+    y = "Vocabulary Test Score"
+  )+
+  theme_minimal()
+
+#Defining model
+vocab_edu_model <- lm(vocab ~ educ, data = vocab_df)
+
+#Summary
+summary(vocab_edu_model)
+
+```
+##Reporting on model
+report results in APA format (coefficients, p-values, and R2), followed by a short practical
+interpretation.
+The linear regression model gives a significant positive effect of education level on vocabulary test scores with an effect size of *b = 0.39, SE = 0.02, t(1475) = 24.44, p< .001*. The intercept was also significant, *b = 1.24, SE = 0.20, t(1475) = 6.19, p< .001*. The model explained roughly 29% of the variance in vocabulary score with an adjusted R^2 of .288, *F(1, 1475) = 597.50, p< .001*.
+
+The relationship between education level and vocabulary test scores found in the model shows that the estimated base score, or the intercept, on vocabulary tests (an education level of zero) is 1.24. From here, an increase in test scores of .39 is estimated for each increase of one unit on education level.
+
+## Part 2.2
+Extend the analysis by making a new model, where you include whether a person is native-
+born (nativeBorn) as a predictor. Again, visualize and model the relationship.
+
+```{r}
+ggplot(vocab_df, aes(x = educ, y = vocab, color = nativeBorn)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", se = TRUE) +
+  labs(
+    x = "Education",
+    y = "Vocabulary score",
+    color = "Native born"
+  ) +
+  theme_minimal()
+
+# Defining model
+vocab_edu_native_model <- lm(vocab ~ educ + nativeBorn, data = vocab_df)
+
+# Summary
+summary(vocab_edu_native_model)
+
+```
+## Reporting on the native born model
+
+Native born emerged as a significant predictor of vocabulary performance, with native-born individuals scoring approximately 0.65 points higher than their non-native-born counterparts, *b = 0.65, SE = 0.21, t(1474) = 3.16, p = .002*. With native born status controlled for, some variance previously attributed to the intercept shifted to this new variable, reducing the intercept estimate to *b = 0.63, SE = 0.28, t(1474) = 2.27, p = .002*. The education predictor remained stable after introducing the second variable, *b = 0.39, SE = 0.02, t(1475) = 24.44, p < .001*. The model's adjusted R² showed modest improvement at .292, *F(1, 1474) = 305.6, p < .001*.
+
+Both education level and native speaker status demonstrate positive associations with vocabulary test performance, with native speakers outperforming non-native speakers while education maintains its predictive strength.
+
+
+## Part 2.3
+Consider whether education and native-born status interact in predicting vocabulary, and if
+so, fit an interaction model. For each model, report results in APA format and explain the
+practical meaning.
+
+The relationship between vocabulary scores and education level could function differently between native and non-native speaker. To take this into account, an interaction model is made.
+```{r}
+vocab_edu_native_inter_model <- lm(vocab ~ educ + nativeBorn + educ * nativeBorn, data = vocab_df)
+
+#Create summary statistics
+summary(vocab_edu_native_inter_model)
+```
+
+
+## Reporting on interaction model
+Even though the interaction term alludes to an interesting slightly negative connection between education level and native born status, where an increase in education affects vocabulary in a negative direction. The interaction is not significant however, *b = -0.03, SE = 0.06, t(1473) = -0.45, p < .05*
+
+## Part 2.4
+Finally, compare the models and discuss which one performs best based on p-values and R2,
+as well as the real-world interpretability of the results
+
+```{r}
+anova(vocab_edu_model, vocab_edu_native_model, vocab_edu_native_inter_model)
+```
+##Report on modelcomparison
+An ANOVA was performed to evaluate whether increasingly complex models justified their additional parameters through improved fit. The linear model incorporating both education level and native speaker status significantly outperformed the education-only model, *F(1, 1474) = 10.0, p = .002*. However, adding an interaction term did not yield further improvement in model fit. Examination of R^2 values corroborated these findings, with the two-predictor model demonstrating marginally better explanatory power.
+
+These results suggest that while education level serves as a strong predictor of vocabulary performance, whether an individual is tested in their native language substantially influences their expected scores.

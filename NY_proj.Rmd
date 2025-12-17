@@ -52,6 +52,8 @@ data <- data %>% select(price, name,vs_compound,log_price, neighbourhood, room_t
 # Creating a mixed effects model that allows for a random intercept for neighbourhood and room type (whole aparment or only room) as these intuitively carry price information
 model_sent_neighbor <- lmerTest::lmer(log_price ~ vs_compound + (1|neighbourhood) + (1|room_type), data=data)
 
+model_sent_neighbor_no_log <- lmerTest::lmer(price ~ vs_compound + (1|neighbourhood) + (1|room_type), data=data)
+
 # From the summary we see a statistically significant negative effect of sentiment on the price per night
 summary(model_sent_neighbor)
 
@@ -63,6 +65,14 @@ r.squaredGLMM(model_sent_neighbor)
 # Log transformation of price variable has moved the residuals closer to the theoretical line for normality of residuals, but still does not meet the assumptions - we will touch on this in limitations.
 qqnorm(residuals(model_sent_neighbor))
 ```
+
+```{r}
+qqnorm(residuals(model_sent_neighbor_no_log))
+```
+```{r}
+plot(model_sent_neighbor)
+```
+
 
 ```{r}
 # Plotting the model for a visual representation of the observed effect.
